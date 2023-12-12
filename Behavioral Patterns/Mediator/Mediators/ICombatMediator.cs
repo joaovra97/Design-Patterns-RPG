@@ -1,9 +1,8 @@
-﻿namespace Mediator.Mediators
+﻿namespace Mediator.Mediators;
+
+// Interface do Mediador: ICombatMediator
+public interface ICombatMediator
 {
-	// Interface do Mediador: ICombatMediator
-	public interface ICombatMediator
-	{
-		void RegisterParticipant(Character participant);
-		void SendAction(Character sender, string action);
-	}
+	void RegisterParticipant(Character participant);
+	void SendAction(Character sender, string action);
 }

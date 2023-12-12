@@ -1,8 +1,7 @@
-﻿namespace Proxy.Characters
+﻿namespace Proxy.Characters;
+
+// Subject: ICharacter
+public interface ICharacter
 {
-	// Subject: ICharacter
-	public interface ICharacter
-	{
-		void Display();
-	}
+	void Display();
 }

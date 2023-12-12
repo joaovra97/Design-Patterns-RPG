@@ -1,10 +1,9 @@
 ﻿using Visitor.Visitors;
 
-namespace Visitor.Elements
+namespace Visitor.Elements;
+
+// Interface do Elemento: IElement
+public interface IElement
 {
-	// Interface do Elemento: IElement
-	public interface IElement
-	{
-		void Accept(IVisitor visitor);
-	}
+	void Accept(IVisitor visitor);
 }

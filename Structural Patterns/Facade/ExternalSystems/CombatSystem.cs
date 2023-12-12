@@ -1,11 +1,10 @@
-﻿namespace Facade.ExternalSystems
+﻿namespace Facade.ExternalSystems;
+
+// Subsistema 3: CombatSystem
+public class CombatSystem
 {
-	// Subsistema 3: CombatSystem
-	public class CombatSystem
+	public void StartCombat()
 	{
-		public void StartCombat()
-		{
-			Console.WriteLine("Starting combat!");
-		}
+		Console.WriteLine("Starting combat!");
 	}
 }

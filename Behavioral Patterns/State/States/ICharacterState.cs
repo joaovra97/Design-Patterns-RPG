@@ -1,8 +1,7 @@
-﻿namespace State.States
+﻿namespace State.States;
+
+// Interface do Estado: ICharacterState
+public interface ICharacterState
 {
-	// Interface do Estado: ICharacterState
-	public interface ICharacterState
-	{
-		void HandleState(Character context);
-	}
+	void HandleState(Character context);
 }

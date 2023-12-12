@@ -1,29 +1,28 @@
 ﻿using Bridge.Characters;
 using Bridge.Weapons;
 
-namespace Bridge
+namespace Bridge;
+
+public class Program
 {
-	public class Program
+	public static void Main()
 	{
-		public static void Main()
-		{
-			// Criando personagens com diferentes armas
-			IWeapon sword = new Sword();
-			IWeapon bow = new Bow();
+		// Criando personagens com diferentes armas
+		IWeapon sword = new Sword();
+		IWeapon bow = new Bow();
 
-			Character elfCharacter = new Elf(bow);
-			Character orcCharacter = new Orc(sword);
+		Character elfCharacter = new Elf(bow);
+		Character orcCharacter = new Orc(sword);
 
-			// Exibindo informações do personagem e realizando ataques
-			Console.WriteLine("Elf character:");
-			elfCharacter.Display();
-			elfCharacter.PerformAttack();
+		// Exibindo informações do personagem e realizando ataques
+		Console.WriteLine("Elf character:");
+		elfCharacter.Display();
+		elfCharacter.PerformAttack();
 
-			Console.WriteLine();
+		Console.WriteLine();
 
-			Console.WriteLine("Orc character:");
-			orcCharacter.Display();
-			orcCharacter.PerformAttack();
-		}
+		Console.WriteLine("Orc character:");
+		orcCharacter.Display();
+		orcCharacter.PerformAttack();
 	}
 }

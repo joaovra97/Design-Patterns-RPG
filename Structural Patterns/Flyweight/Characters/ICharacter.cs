@@ -1,8 +1,7 @@
-﻿namespace Flyweight.Characters
+﻿namespace Flyweight.Characters;
+
+// Interface Flyweight: ICharacter
+public interface ICharacter
 {
-	// Interface Flyweight: ICharacter
-	public interface ICharacter
-	{
-		void Display(string estadoExtrinseco);
-	}
+	void Display(string estadoExtrinseco);
 }

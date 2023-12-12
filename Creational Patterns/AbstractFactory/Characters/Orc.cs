@@ -1,11 +1,10 @@
-﻿namespace AbstractFactory.Characters
+﻿namespace AbstractFactory.Characters;
+
+// Produto Concreto: Diferentes tipos de personagens (Orc)
+public class Orc : ICharacter
 {
-	// Produto Concreto: Diferentes tipos de personagens (Orc)
-	public class Orc : ICharacter
+	public override void Display()
 	{
-		public override void Display()
-		{
-			Console.WriteLine("Orc character created!");
-		}
+		Console.WriteLine("Orc character created!");
 	}
 }

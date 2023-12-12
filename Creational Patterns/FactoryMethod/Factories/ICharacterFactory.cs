@@ -1,10 +1,9 @@
 ﻿using FactoryMethod.Characters;
 
-namespace FactoryMethod.Factories
+namespace FactoryMethod.Factories;
+
+// Interface do Factory Method
+public interface ICharacterFactory
 {
-	// Interface do Factory Method
-	public interface ICharacterFactory
-	{
-		public ICharacter CreateCharacter();
-	}
+	public ICharacter CreateCharacter();
 }

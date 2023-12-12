@@ -1,25 +1,24 @@
 ﻿using Command.Commands;
 
-namespace Command
+namespace Command;
+
+// Invocador: CommandInvoker
+public class CommandInvoker
 {
-	// Invocador: CommandInvoker
-	public class CommandInvoker
+	private readonly List<ICommand> commands = new();
+
+	public void AddCommand(ICommand command)
 	{
-		private readonly List<ICommand> commands = new();
+		commands.Add(command);
+	}
 
-		public void AddCommand(ICommand command)
+	public void ExecuteCommands()
+	{
+		foreach (var command in commands)
 		{
-			commands.Add(command);
+			command.Execute();
 		}
 
-		public void ExecuteCommands()
-		{
-			foreach (var command in commands)
-			{
-				command.Execute();
-			}
-
-			commands.Clear();
-		}
+		commands.Clear();
 	}
 }

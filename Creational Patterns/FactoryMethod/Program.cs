@@ -1,32 +1,31 @@
 ﻿using FactoryMethod.Characters;
 using FactoryMethod.Factories;
 
-namespace FactoryMethod
+namespace FactoryMethod;
+
+
+public class Program
 {
-
-	public class Program
+	public static void Main()
 	{
-		public static void Main()
-		{
-			// Usando o Factory Method para criar diferentes tipos de personagens
-			ICharacterFactory factory = new WarriorFactory();
-			ICharacter warrior = factory.CreateCharacter();
+		// Usando o Factory Method para criar diferentes tipos de personagens
+		ICharacterFactory factory = new WarriorFactory();
+		ICharacter warrior = factory.CreateCharacter();
 
-			factory = new MageFactory();
-			ICharacter mage = factory.CreateCharacter();
+		factory = new MageFactory();
+		ICharacter mage = factory.CreateCharacter();
 
-			factory = new ArcherFactory();
-			ICharacter archer = factory.CreateCharacter();
+		factory = new ArcherFactory();
+		ICharacter archer = factory.CreateCharacter();
 
-			// Testando os personagens
-			warrior.Attack();
-			warrior.Defend();
+		// Testando os personagens
+		warrior.Attack();
+		warrior.Defend();
 
-			mage.Attack();
-			mage.Defend();
+		mage.Attack();
+		mage.Defend();
 
-			archer.Attack();
-			archer.Defend();
-		}
+		archer.Attack();
+		archer.Defend();
 	}
 }

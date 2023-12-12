@@ -1,18 +1,17 @@
-﻿namespace Observer.Observers
+﻿namespace Observer.Observers;
+
+// Observador Concreto: EnemyObserver
+public class EnemyObserver : IPlayerObserver
 {
-	// Observador Concreto: EnemyObserver
-	public class EnemyObserver : IPlayerObserver
+	private readonly string _enemyName;
+
+	public EnemyObserver(string enemyName)
 	{
-		private readonly string _enemyName;
+		_enemyName = enemyName;
+	}
 
-		public EnemyObserver(string enemyName)
-		{
-			_enemyName = enemyName;
-		}
-
-		public void Update(string message)
-		{
-			Console.WriteLine($"{_enemyName} received update: {message}");
-		}
+	public void Update(string message)
+	{
+		Console.WriteLine($"{_enemyName} received update: {message}");
 	}
 }

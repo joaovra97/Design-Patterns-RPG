@@ -1,11 +1,10 @@
-﻿namespace Adapter
+﻿namespace Adapter;
+
+// Classe que não implementa ICharacter: Wizard
+public class Wizard
 {
-	// Classe que não implementa ICharacter: Wizard
-	public class Wizard
+	public void CastSpell()
 	{
-		public void CastSpell()
-		{
-			Console.WriteLine("Wizard casts a powerful spell!");
-		}
+		Console.WriteLine("Wizard casts a powerful spell!");
 	}
 }

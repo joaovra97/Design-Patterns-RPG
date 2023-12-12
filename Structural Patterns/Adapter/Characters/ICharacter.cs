@@ -1,8 +1,7 @@
-﻿namespace Adapter.Characters
+﻿namespace Adapter.Characters;
+
+// Interface Alvo: ICharacter
+public interface ICharacter
 {
-	// Interface Alvo: ICharacter
-	public interface ICharacter
-	{
-		void Attack();
-	}
+	void Attack();
 }

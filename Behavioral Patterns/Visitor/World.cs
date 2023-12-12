@@ -1,24 +1,23 @@
 ﻿using Visitor.Elements;
 using Visitor.Visitors;
 
-namespace Visitor
+namespace Visitor;
+
+// Estrutura de Objetos: World
+public class World
 {
-	// Estrutura de Objetos: World
-	public class World
+	private readonly List<IElement> elements = new();
+
+	public void AddElement(IElement element)
 	{
-		private readonly List<IElement> elements = new();
+		elements.Add(element);
+	}
 
-		public void AddElement(IElement element)
+	public void ExecuteAction(IVisitor visitor)
+	{
+		foreach (var element in elements)
 		{
-			elements.Add(element);
-		}
-
-		public void ExecuteAction(IVisitor visitor)
-		{
-			foreach (var element in elements)
-			{
-				element.Accept(visitor);
-			}
+			element.Accept(visitor);
 		}
 	}
 }

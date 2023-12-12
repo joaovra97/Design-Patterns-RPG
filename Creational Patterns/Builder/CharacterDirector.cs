@@ -1,15 +1,14 @@
 ﻿using Builder.Builders;
 
-namespace Builder
+namespace Builder;
+
+// Diretor: CharacterDirector
+public class CharacterDirector
 {
-	// Diretor: CharacterDirector
-	public class CharacterDirector
+	public void Construct(ICharacterBuilder builder)
 	{
-		public void Construct(ICharacterBuilder builder)
-		{
-			builder.BuildRace();
-			builder.BuildWeapon();
-			builder.BuildArmor();
-		}
+		builder.BuildRace();
+		builder.BuildWeapon();
+		builder.BuildArmor();
 	}
 }

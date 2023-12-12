@@ -1,8 +1,7 @@
-﻿namespace Bridge.Weapons
+﻿namespace Bridge.Weapons;
+
+// Implementador: Weapon
+public interface IWeapon
 {
-	// Implementador: Weapon
-	public interface IWeapon
-	{
-		void Attack();
-	}
+	void Attack();
 }

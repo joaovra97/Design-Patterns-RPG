@@ -1,11 +1,10 @@
-﻿namespace Bridge.Weapons
+﻿namespace Bridge.Weapons;
+
+// Implementador Concreto: Sword
+public class Sword : IWeapon
 {
-	// Implementador Concreto: Sword
-	public class Sword : IWeapon
+	public void Attack()
 	{
-		public void Attack()
-		{
-			Console.WriteLine("Attacking with a sword!");
-		}
+		Console.WriteLine("Attacking with a sword!");
 	}
 }

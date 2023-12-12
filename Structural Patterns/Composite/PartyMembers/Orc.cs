@@ -1,18 +1,17 @@
-﻿namespace Composite.PartyMembers
+﻿namespace Composite.PartyMembers;
+
+// Folha: Orc
+public class Orc : IPartyMember
 {
-	// Folha: Orc
-	public class Orc : IPartyMember
+	private readonly string _name;
+
+	public Orc(string name)
 	{
-		private readonly string _name;
+		_name = name;
+	}
 
-		public Orc(string name)
-		{
-			_name = name;
-		}
-
-		public void Display()
-		{
-			Console.WriteLine($"Orc named {_name}");
-		}
+	public void Display()
+	{
+		Console.WriteLine($"Orc named {_name}");
 	}
 }

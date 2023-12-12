@@ -1,18 +1,17 @@
-﻿namespace Observer.Observers
+﻿namespace Observer.Observers;
+
+// Observador Concreto: AllyObserver
+public class AllyObserver : IPlayerObserver
 {
-	// Observador Concreto: AllyObserver
-	public class AllyObserver : IPlayerObserver
+	private readonly string _allyName;
+
+	public AllyObserver(string allyName)
 	{
-		private readonly string _allyName;
+		_allyName = allyName;
+	}
 
-		public AllyObserver(string allyName)
-		{
-			_allyName = allyName;
-		}
-
-		public void Update(string message)
-		{
-			Console.WriteLine($"{_allyName} received update: {message}");
-		}
+	public void Update(string message)
+	{
+		Console.WriteLine($"{_allyName} received update: {message}");
 	}
 }

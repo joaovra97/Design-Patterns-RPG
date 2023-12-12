@@ -1,32 +1,31 @@
 ﻿using Facade.ExternalSystems;
 
-namespace Facade
+namespace Facade;
+
+// Fachada: RpgGameFacade
+public class RpgGameFacade
 {
-	// Fachada: RpgGameFacade
-	public class RpgGameFacade
+	private readonly CharacterCreationSystem characterCreation;
+	private readonly InventorySystem inventory;
+	private readonly CombatSystem combat;
+
+	public RpgGameFacade()
 	{
-		private readonly CharacterCreationSystem characterCreation;
-		private readonly InventorySystem inventory;
-		private readonly CombatSystem combat;
+		characterCreation = new CharacterCreationSystem();
+		inventory = new InventorySystem();
+		combat = new CombatSystem();
+	}
 
-		public RpgGameFacade()
-		{
-			characterCreation = new CharacterCreationSystem();
-			inventory = new InventorySystem();
-			combat = new CombatSystem();
-		}
+	// Método da fachada para simplificar a criação de personagens
+	public void CreateAndEquipCharacter(string characterName, string characterClass, string initialItem)
+	{
+		characterCreation.CreateCharacter(characterName, characterClass);
+		inventory.AddItem(initialItem);
+	}
 
-		// Método da fachada para simplificar a criação de personagens
-		public void CreateAndEquipCharacter(string characterName, string characterClass, string initialItem)
-		{
-			characterCreation.CreateCharacter(characterName, characterClass);
-			inventory.AddItem(initialItem);
-		}
-
-		// Método da fachada para simplificar o início do combate
-		public void StartCombat()
-		{
-			combat.StartCombat();
-		}
+	// Método da fachada para simplificar o início do combate
+	public void StartCombat()
+	{
+		combat.StartCombat();
 	}
 }

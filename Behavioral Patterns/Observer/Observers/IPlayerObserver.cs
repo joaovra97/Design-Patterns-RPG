@@ -1,8 +1,7 @@
-﻿namespace Observer.Observers
+﻿namespace Observer.Observers;
+
+// Interface do Observador: IPlayerObserver
+public interface IPlayerObserver
 {
-	// Interface do Observador: IPlayerObserver
-	public interface IPlayerObserver
-	{
-		void Update(string message);
-	}
+	void Update(string message);
 }

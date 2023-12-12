@@ -1,24 +1,23 @@
 ﻿using Prototype.Characters;
 
-namespace Prototype
+namespace Prototype;
+
+public class Program
 {
-	public class Program
+	public static void Main()
 	{
-		public static void Main()
-		{
-			var characterManager = new CharacterManager();
+		var characterManager = new CharacterManager();
 
-			// Cria um personagem Elfo
-			CharacterPrototype elfCharacter = characterManager.CreateElf();
-			Console.WriteLine("New Elf character created:");
-			elfCharacter.DisplayInfo();
+		// Cria um personagem Elfo
+		CharacterPrototype elfCharacter = characterManager.CreateElf();
+		Console.WriteLine("New Elf character created:");
+		elfCharacter.DisplayInfo();
 
-			Console.WriteLine();
+		Console.WriteLine();
 
-			// Cria um personagem Orc
-			CharacterPrototype orcCharacter = characterManager.CreateOrc();
-			Console.WriteLine("New Orc character created:");
-			orcCharacter.DisplayInfo();
-		}
+		// Cria um personagem Orc
+		CharacterPrototype orcCharacter = characterManager.CreateOrc();
+		Console.WriteLine("New Orc character created:");
+		orcCharacter.DisplayInfo();
 	}
 }

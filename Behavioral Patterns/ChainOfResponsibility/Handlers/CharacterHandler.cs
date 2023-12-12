@@ -1,15 +1,14 @@
-﻿namespace ChainOfResponsibility.Handlers
+﻿namespace ChainOfResponsibility.Handlers;
+
+// Manipulador: CharacterHandler
+public abstract class CharacterHandler
 {
-	// Manipulador: CharacterHandler
-	public abstract class CharacterHandler
+	protected CharacterHandler successor;
+
+	public void SetSuccessor(CharacterHandler successor)
 	{
-		protected CharacterHandler successor;
-
-		public void SetSuccessor(CharacterHandler successor)
-		{
-			this.successor = successor;
-		}
-
-		public abstract void HandleRequest(CharacterAction action);
+		this.successor = successor;
 	}
+
+	public abstract void HandleRequest(CharacterAction action);
 }

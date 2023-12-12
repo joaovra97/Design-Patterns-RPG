@@ -1,8 +1,7 @@
-﻿namespace AbstractFactory.Armors
+﻿namespace AbstractFactory.Armors;
+
+// Produto Abstrato: Armadura
+public interface IArmor
 {
-	// Produto Abstrato: Armadura
-	public interface IArmor
-	{
-		void Defend();
-	}
+	void Defend();
 }

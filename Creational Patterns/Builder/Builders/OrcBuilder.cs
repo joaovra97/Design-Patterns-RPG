@@ -1,28 +1,27 @@
-﻿namespace Builder.Builders
+﻿namespace Builder.Builders;
+
+// Builder Concreto: OrcBuilder
+public class OrcBuilder : ICharacterBuilder
 {
-	// Builder Concreto: OrcBuilder
-	public class OrcBuilder : ICharacterBuilder
+	private readonly Character orcCharacter = new();
+
+	public void BuildRace()
 	{
-		private readonly Character orcCharacter = new();
+		orcCharacter.Race = "Orc";
+	}
 
-		public void BuildRace()
-		{
-			orcCharacter.Race = "Orc";
-		}
+	public void BuildWeapon()
+	{
+		orcCharacter.Weapon = "Axe";
+	}
 
-		public void BuildWeapon()
-		{
-			orcCharacter.Weapon = "Axe";
-		}
+	public void BuildArmor()
+	{
+		orcCharacter.Armor = "Heavy Plate Armor";
+	}
 
-		public void BuildArmor()
-		{
-			orcCharacter.Armor = "Heavy Plate Armor";
-		}
-
-		public Character GetCharacter()
-		{
-			return orcCharacter;
-		}
+	public Character GetCharacter()
+	{
+		return orcCharacter;
 	}
 }

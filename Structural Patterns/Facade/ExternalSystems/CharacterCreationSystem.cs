@@ -1,11 +1,10 @@
-﻿namespace Facade.ExternalSystems
+﻿namespace Facade.ExternalSystems;
+
+// Subsistema 1: CharacterCreationSystem
+public class CharacterCreationSystem
 {
-	// Subsistema 1: CharacterCreationSystem
-	public class CharacterCreationSystem
+	public void CreateCharacter(string characterName, string characterClass)
 	{
-		public void CreateCharacter(string characterName, string characterClass)
-		{
-			Console.WriteLine($"Creating {characterClass} character named {characterName}.");
-		}
+		Console.WriteLine($"Creating {characterClass} character named {characterName}.");
 	}
 }

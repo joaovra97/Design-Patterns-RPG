@@ -1,10 +1,9 @@
-﻿namespace ChainOfResponsibility
+﻿namespace ChainOfResponsibility;
+
+// Enum: ActionType
+public enum ActionType
 {
-	// Enum: ActionType
-	public enum ActionType
-	{
-		Attack,
-		Defense,
-		Custom
-	}
+	Attack,
+	Defense,
+	Custom
 }

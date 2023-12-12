@@ -1,18 +1,17 @@
-﻿namespace Decorator.Characters
+﻿namespace Decorator.Characters;
+
+// Componente Concreto: Orc
+public class Orc : ICharacter
 {
-	// Componente Concreto: Orc
-	public class Orc : ICharacter
+	private readonly string _name;
+
+	public Orc(string name)
 	{
-		private readonly string _name;
+		_name = name;
+	}
 
-		public Orc(string name)
-		{
-			_name = name;
-		}
-
-		public void Display()
-		{
-			Console.WriteLine($"This is an Orc called {_name}");
-		}
+	public void Display()
+	{
+		Console.WriteLine($"This is an Orc called {_name}");
 	}
 }

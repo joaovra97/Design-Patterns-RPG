@@ -1,8 +1,7 @@
-﻿namespace Strategy.Strategies
+﻿namespace Strategy.Strategies;
+
+// Interface da Estratégia: IAttackStrategy
+public interface IAttackStrategy
 {
-	// Interface da Estratégia: IAttackStrategy
-	public interface IAttackStrategy
-	{
-		void ExecuteAttack(string playerName);
-	}
+	void ExecuteAttack(string playerName);
 }

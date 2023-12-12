@@ -1,33 +1,32 @@
 ﻿using ChainOfResponsibility.Handlers;
 
-namespace ChainOfResponsibility
+namespace ChainOfResponsibility;
+
+public class Program
 {
-	public class Program
+	public static void Main()
 	{
-		public static void Main()
-		{
-			// Criando a cadeia de responsabilidade
-			CharacterHandler attackHandler = new AttackHandler();
-			CharacterHandler defenseHandler = new DefenseHandler();
+		// Criando a cadeia de responsabilidade
+		CharacterHandler attackHandler = new AttackHandler();
+		CharacterHandler defenseHandler = new DefenseHandler();
 
-			attackHandler.SetSuccessor(defenseHandler);
+		attackHandler.SetSuccessor(defenseHandler);
 
-			// Manipulando diferentes ações de personagens
-			Console.WriteLine("Handling character actions:");
+		// Manipulando diferentes ações de personagens
+		Console.WriteLine("Handling character actions:");
 
-			var attackAction = new CharacterAction("Warrior", ActionType.Attack);
-			attackHandler.HandleRequest(attackAction);
+		var attackAction = new CharacterAction("Warrior", ActionType.Attack);
+		attackHandler.HandleRequest(attackAction);
 
-			var defenseAction = new CharacterAction("Mage", ActionType.Defense);
-			attackHandler.HandleRequest(defenseAction);
+		var defenseAction = new CharacterAction("Mage", ActionType.Defense);
+		attackHandler.HandleRequest(defenseAction);
 
-			// Adicionando um novo manipulador à cadeia
-			CharacterHandler customHandler = new CustomHandler();
-			defenseHandler.SetSuccessor(customHandler);
+		// Adicionando um novo manipulador à cadeia
+		CharacterHandler customHandler = new CustomHandler();
+		defenseHandler.SetSuccessor(customHandler);
 
-			// Manipulando uma ação customizada
-			var customAction = new CharacterAction("Rogue", ActionType.Custom);
-			attackHandler.HandleRequest(customAction);
-		}
+		// Manipulando uma ação customizada
+		var customAction = new CharacterAction("Rogue", ActionType.Custom);
+		attackHandler.HandleRequest(customAction);
 	}
 }

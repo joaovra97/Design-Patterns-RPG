@@ -1,55 +1,54 @@
 ﻿using State.States;
 
-namespace State
+namespace State;
+
+// Contexto: Character
+public class Character
 {
-	// Contexto: Character
-	public class Character
+	private ICharacterState currentState;
+	public string Name { get; private set; }
+	public int HP { get; private set; }
+
+	public Character(string name)
 	{
-		private ICharacterState currentState;
-		public string Name { get; private set; }
-		public int HP { get; private set; }
+		Name = name;
+		HP = 50;
+		currentState = new NormalState(); // O estado inicial é normal
+	}
 
-		public Character(string name)
+	public void ChangeState(ICharacterState newState)
+	{
+		currentState = newState;
+		currentState.HandleState(this);
+	}
+
+	// Exemplo de ações que podem acionar mudanças de estado
+	public void TakeDamage(int damage)
+	{
+		HP -= damage;
+
+		// Se a saúde estiver abaixo de um limite, mudar para o estado ferido
+		if (HP > 0 && HP < 50)
 		{
-			Name = name;
-			HP = 50;
-			currentState = new NormalState(); // O estado inicial é normal
+			ChangeState(new InjuredState());
 		}
+	}
 
-		public void ChangeState(ICharacterState newState)
+	public void TakePoison()
+	{
+		HP -= 10;
+
+		// Se envenenado, mudar para o estado envenenado
+		if (HP > 0 && HP < 50)
 		{
-			currentState = newState;
-			currentState.HandleState(this);
+			ChangeState(new PoisonedState());
 		}
+	}
 
-		// Exemplo de ações que podem acionar mudanças de estado
-		public void TakeDamage(int damage)
-		{
-			HP -= damage;
-
-			// Se a saúde estiver abaixo de um limite, mudar para o estado ferido
-			if (HP > 0 && HP < 50)
-			{
-				ChangeState(new InjuredState());
-			}
-		}
-
-		public void TakePoison()
-		{
-			HP -= 10;
-
-			// Se envenenado, mudar para o estado envenenado
-			if (HP > 0 && HP < 50)
-			{
-				ChangeState(new PoisonedState());
-			}
-		}
-
-		public void FullHeal()
-		{
-			// Quando curado, retornar ao estado normal
-			HP = 50;
-			ChangeState(new NormalState());
-		}
+	public void FullHeal()
+	{
+		// Quando curado, retornar ao estado normal
+		HP = 50;
+		ChangeState(new NormalState());
 	}
 }

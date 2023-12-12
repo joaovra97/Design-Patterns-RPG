@@ -1,11 +1,10 @@
-﻿namespace AbstractFactory.Characters
+﻿namespace AbstractFactory.Characters;
+
+// Produto Concreto: Diferentes tipos de personagens (Elf)
+public class Elf : ICharacter
 {
-	// Produto Concreto: Diferentes tipos de personagens (Elf)
-	public class Elf : ICharacter
+	public override void Display()
 	{
-		public override void Display()
-		{
-			Console.WriteLine("Elf character created!");
-		}
+		Console.WriteLine("Elf character created!");
 	}
 }

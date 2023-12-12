@@ -1,11 +1,10 @@
-﻿namespace Builder.Builders
+﻿namespace Builder.Builders;
+
+// Builder Abstrato: CharacterBuilder
+public interface ICharacterBuilder
 {
-	// Builder Abstrato: CharacterBuilder
-	public interface ICharacterBuilder
-	{
-		void BuildRace();
-		void BuildWeapon();
-		void BuildArmor();
-		Character GetCharacter();
-	}
+	void BuildRace();
+	void BuildWeapon();
+	void BuildArmor();
+	Character GetCharacter();
 }

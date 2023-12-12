@@ -1,11 +1,10 @@
-﻿namespace Iterator.Iterators
+﻿namespace Iterator.Iterators;
+
+// Interface do Iterador: IIterator
+public interface IIterator
 {
-	// Interface do Iterador: IIterator
-	public interface IIterator
-	{
-		Character First();
-		Character Next();
-		bool IsDone();
-		Character CurrentCharacter { get; }
-	}
+	Character First();
+	Character Next();
+	bool IsDone();
+	Character CurrentCharacter { get; }
 }

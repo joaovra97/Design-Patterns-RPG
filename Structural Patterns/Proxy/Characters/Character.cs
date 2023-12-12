@@ -1,26 +1,25 @@
-﻿namespace Proxy.Characters
+﻿namespace Proxy.Characters;
+
+// Subject real: Character
+public class Character : ICharacter
 {
-	// Subject real: Character
-	public class Character : ICharacter
+	private readonly string characterName;
+
+	public Character(string name)
 	{
-		private readonly string characterName;
+		characterName = name;
+		LoadCharacterData();
+	}
 
-		public Character(string name)
-		{
-			characterName = name;
-			LoadCharacterData();
-		}
+	// Simular o carregamento de dados do personagem (operação cara)
+	private void LoadCharacterData()
+	{
+		Console.WriteLine($"Loading data for character: {characterName}");
+		// Processo de simulação de carregamento...
+	}
 
-		// Simular o carregamento de dados do personagem (operação cara)
-		private void LoadCharacterData()
-		{
-			Console.WriteLine($"Loading data for character: {characterName}");
-			// Processo de simulação de carregamento...
-		}
-
-		public void Display()
-		{
-			Console.WriteLine($"Displaying character: {characterName}");
-		}
+	public void Display()
+	{
+		Console.WriteLine($"Displaying character: {characterName}");
 	}
 }

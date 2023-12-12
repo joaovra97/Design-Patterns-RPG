@@ -1,8 +1,7 @@
-﻿namespace Composite.PartyMembers
+﻿namespace Composite.PartyMembers;
+
+// Componente: IPartyMember
+public interface IPartyMember
 {
-	// Componente: IPartyMember
-	public interface IPartyMember
-	{
-		void Display();
-	}
+	void Display();
 }

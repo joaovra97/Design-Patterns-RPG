@@ -1,8 +1,7 @@
-﻿namespace AbstractFactory.Characters
+﻿namespace AbstractFactory.Characters;
+
+// Produto Abstrato: Personagem
+public abstract class ICharacter
 {
-	// Produto Abstrato: Personagem
-	public abstract class ICharacter
-	{
-		public abstract void Display();
-	}
+	public abstract void Display();
 }

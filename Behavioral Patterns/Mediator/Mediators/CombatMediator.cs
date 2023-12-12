@@ -1,23 +1,22 @@
-﻿namespace Mediator.Mediators
+﻿namespace Mediator.Mediators;
+
+// Mediador Concreto: CombatMediator
+public class CombatMediator : ICombatMediator
 {
-	// Mediador Concreto: CombatMediator
-	public class CombatMediator : ICombatMediator
+	private readonly List<Character> characters = new();
+
+	public void RegisterParticipant(Character character)
 	{
-		private readonly List<Character> characters = new();
+		characters.Add(character);
+	}
 
-		public void RegisterParticipant(Character character)
+	public void SendAction(Character sender, string action)
+	{
+		foreach (var character in characters)
 		{
-			characters.Add(character);
-		}
-
-		public void SendAction(Character sender, string action)
-		{
-			foreach (var character in characters)
+			if (character != sender)
 			{
-				if (character != sender)
-				{
-					character.ReceiveAction(action);
-				}
+				character.ReceiveAction(action);
 			}
 		}
 	}

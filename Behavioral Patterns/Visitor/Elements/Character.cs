@@ -1,22 +1,21 @@
 ﻿using Visitor.Visitors;
 
-namespace Visitor.Elements
+namespace Visitor.Elements;
+
+// Elemento Concreto: Character
+public class Character : IElement
 {
-	// Elemento Concreto: Character
-	public class Character : IElement
+	public string Name { get; private set; }
+	public int Health { get; private set; }
+
+	public Character(string name, int health)
 	{
-		public string Name { get; private set; }
-		public int Health { get; private set; }
+		Name = name;
+		Health = health;
+	}
 
-		public Character(string name, int health)
-		{
-			Name = name;
-			Health = health;
-		}
-
-		public void Accept(IVisitor visitor)
-		{
-			visitor.VisitCharacter(this);
-		}
+	public void Accept(IVisitor visitor)
+	{
+		visitor.VisitCharacter(this);
 	}
 }

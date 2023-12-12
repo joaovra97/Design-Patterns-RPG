@@ -1,25 +1,24 @@
 ﻿using Strategy.Strategies;
 
-namespace Strategy
+namespace Strategy;
+
+public class Program
 {
-	public class Program
+	public static void Main()
 	{
-		public static void Main()
-		{
-			// Criando um personagem com uma estratégia inicial de ataque
-			var playerCharacter = new Character("Hero", new SwordAttack());
+		// Criando um personagem com uma estratégia inicial de ataque
+		var playerCharacter = new Character("Hero", new SwordAttack());
 
-			// Realizando ataques e observando diferentes estratégias
-			Console.WriteLine("Initiating gameplay:");
+		// Realizando ataques e observando diferentes estratégias
+		Console.WriteLine("Initiating gameplay:");
 
-			playerCharacter.PerformAttack();
+		playerCharacter.PerformAttack();
 
-			// Alterando a estratégia de ataque durante o jogo
-			playerCharacter.SetAttackStrategy(new MagicAttack());
-			playerCharacter.PerformAttack();
+		// Alterando a estratégia de ataque durante o jogo
+		playerCharacter.SetAttackStrategy(new MagicAttack());
+		playerCharacter.PerformAttack();
 
-			playerCharacter.SetAttackStrategy(new BowAttack());
-			playerCharacter.PerformAttack();
-		}
+		playerCharacter.SetAttackStrategy(new BowAttack());
+		playerCharacter.PerformAttack();
 	}
 }
