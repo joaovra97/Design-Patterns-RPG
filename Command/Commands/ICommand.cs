@@ -1,8 +1,8 @@
 ﻿namespace Command.Commands
 {
-    // Interface Command: ICommand
-    public interface ICommand
-    {
-        void Execute();
-    }
+	// Interface Command: ICommand
+	public interface ICommand
+	{
+		void Execute();
+	}
 }

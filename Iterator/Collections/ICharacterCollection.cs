@@ -2,9 +2,9 @@
 
 namespace Iterator.Collections
 {
-    // Interface da Coleção: ICharacterCollection
-    public interface ICharacterCollection
-    {
-        IIterator GetIterator();
-    }
+	// Interface da Coleção: ICharacterCollection
+	public interface ICharacterCollection
+	{
+		IIterator GetIterator();
+	}
 }

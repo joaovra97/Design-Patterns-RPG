@@ -2,7 +2,7 @@
 
 namespace Command
 {
-    public class Program
+	public class Program
 	{
 		public static void Main()
 		{

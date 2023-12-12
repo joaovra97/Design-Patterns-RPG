@@ -2,8 +2,8 @@
 
 namespace Flyweight
 {
-    // Fábrica Flyweight: RpgCharacterFactory
-    public class CharacterFactory
+	// Fábrica Flyweight: RpgCharacterFactory
+	public class CharacterFactory
 	{
 		private readonly Dictionary<string, ICharacter> characterPool = new();
 
@@ -17,7 +17,7 @@ namespace Flyweight
 				characterPool.Add(intrinsicState, character);
 			}
 
-			return character; 
+			return character;
 		}
 	}
 }

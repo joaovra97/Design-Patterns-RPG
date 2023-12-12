@@ -2,8 +2,8 @@
 
 namespace Memento
 {
-    // Originator: Character
-    public class Character
+	// Originator: Character
+	public class Character
 	{
 		private string _name;
 		private int _healthPoints;

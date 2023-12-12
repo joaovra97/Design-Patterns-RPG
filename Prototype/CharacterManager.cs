@@ -2,8 +2,8 @@
 
 namespace Prototype
 {
-    // Cliente: CharacterManager
-    public class CharacterManager
+	// Cliente: CharacterManager
+	public class CharacterManager
 	{
 		private readonly CharacterPrototype elfPrototype;
 		private readonly CharacterPrototype orcPrototype;

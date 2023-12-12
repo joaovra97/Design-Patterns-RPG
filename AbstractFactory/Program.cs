@@ -5,7 +5,7 @@ using AbstractFactory.Weapons;
 
 namespace AbstractFactory
 {
-    public class Program
+	public class Program
 	{
 		static void Main()
 		{

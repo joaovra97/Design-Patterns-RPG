@@ -3,7 +3,7 @@ using Visitor.Visitors;
 
 namespace Visitor
 {
-    public class Program
+	public class Program
 	{
 		public static void Main()
 		{

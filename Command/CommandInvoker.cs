@@ -2,14 +2,14 @@
 
 namespace Command
 {
-    // Invocador: CommandInvoker
-    public class CommandInvoker
+	// Invocador: CommandInvoker
+	public class CommandInvoker
 	{
 		private readonly List<ICommand> commands = new();
 
 		public void AddCommand(ICommand command)
 		{
-			commands.Add(command);			
+			commands.Add(command);
 		}
 
 		public void ExecuteCommands()

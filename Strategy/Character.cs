@@ -2,8 +2,8 @@
 
 namespace Strategy
 {
-    // Contexto: Character
-    public class Character
+	// Contexto: Character
+	public class Character
 	{
 		private IAttackStrategy attackStrategy;
 		public string Name { get; private set; }

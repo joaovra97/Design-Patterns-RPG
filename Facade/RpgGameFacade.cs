@@ -2,8 +2,8 @@
 
 namespace Facade
 {
-    // Fachada: RpgGameFacade
-    public class RpgGameFacade
+	// Fachada: RpgGameFacade
+	public class RpgGameFacade
 	{
 		private readonly CharacterCreationSystem characterCreation;
 		private readonly InventorySystem inventory;

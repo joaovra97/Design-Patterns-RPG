@@ -2,8 +2,8 @@
 
 namespace Observer
 {
-    // Subject: PlayerSubject
-    public class PlayerSubject
+	// Subject: PlayerSubject
+	public class PlayerSubject
 	{
 		private readonly List<IPlayerObserver> _observers = new();
 		private readonly string _playerName;

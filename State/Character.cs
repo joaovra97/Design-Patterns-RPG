@@ -2,8 +2,8 @@
 
 namespace State
 {
-    // Contexto: Character
-    public class Character
+	// Contexto: Character
+	public class Character
 	{
 		private ICharacterState currentState;
 		public string Name { get; private set; }

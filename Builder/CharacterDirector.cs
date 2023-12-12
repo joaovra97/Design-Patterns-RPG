@@ -2,8 +2,8 @@
 
 namespace Builder
 {
-    // Diretor: CharacterDirector
-    public class CharacterDirector
+	// Diretor: CharacterDirector
+	public class CharacterDirector
 	{
 		public void Construct(ICharacterBuilder builder)
 		{
